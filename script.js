@@ -123,7 +123,7 @@ function inicializarFormularioContacto() {
         }
     });
     // Validación en tiempo real 
-    const camposValidacion = ['nombre', 'apellido', 'cedula', 'rama', 'caso'];
+    const camposValidacion = ['nombre', 'apellido', 'email', 'cedula', 'rama', 'caso'];
     camposValidacion.forEach(campoId => {
         const campo = document.getElementById(campoId);
         const errorMsg = document.getElementById(`error${campoId.charAt(0).toUpperCase()
@@ -152,6 +152,17 @@ function validarCampo(campo, elementoError) {
                 valido = false;
             } else if (campo.value.trim().length < 2) {
                 mensaje = 'Debe tener al menos 2 caracteres';
+                valido = false;
+            }
+            break;
+
+        case 'email':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!campo.value.trim()) {
+                mensaje = 'El correo es obligatorio';
+                valido = false;
+            } else if (!emailRegex.test(campo.value)) {
+                mensaje = 'Ingrese un correo válido';
                 valido = false;
             }
             break;
@@ -196,6 +207,10 @@ function validarFormulario() {
         {
             campo: document.getElementById('apellido'), error:
                 document.getElementById('errorApellido')
+        },
+        {
+            campo: document.getElementById('email'), error:
+                document.getElementById('errorEmail')
         },
         {
             campo: document.getElementById('cedula'), error:

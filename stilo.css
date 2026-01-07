@@ -6,9 +6,14 @@
     --blanco: #FFFFFF;
     --whatsapp: #25D366;
     --sombra: rgba(0, 0, 0, 0.08);
+    --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -22,20 +27,16 @@ body {
     top: 0;
     width: 100%;
     background-color: #f0efed;
-    height: 80px;
+    box-shadow: 0 2px 15px var(--sombra);
     z-index: 999;
+    height: 80px;
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 60px !important;
-    width: auto !important;
-}
-
 .portada {
+    position: relative;
     margin-top: 80px;
     height: 85vh;
-    position: relative;
-    background: #05090f;
+    background-color: #1E3A5F; /* Esto forzará el color azul de inmediato */
 }

@@ -1,0 +1,234 @@
+/* ============================================
+   1. VARIABLES Y RESET
+   ============================================ */
+:root {
+    --azul-profundo: #1E3A5F; /* [cite: 620] */
+    --dorado-elegante: #D4AF37; /* [cite: 621] */
+    --gris-claro: #F5F7FA; /* [cite: 622] */
+    --gris-oscuro: #2D3748; /* [cite: 623] */
+    --blanco: #FFFFFF; /* [cite: 624] */
+    --whatsapp: #25D366; /* [cite: 625] */
+    --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1); /* [cite: 628] */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* [cite: 634] */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* [cite: 639] */
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif; /* [cite: 648] */
+    color: var(--azul-profundo);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* [cite: 669] */
+}
+
+/* ============================================
+   2. HEADER Y NAVEGACIÓN
+   ============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(240, 239, 237); /* [cite: 731] */
+    height: 80px !important; /* [cite: 2131] */
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.logo img {
+    width: 150px !important; /* [cite: 2124] */
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-desktop ul {
+    display: flex;
+    gap: 35px; /* [cite: 780] */
+}
+
+.nav-desktop a:hover {
+    color: var(--dorado-elegante); /* [cite: 803] */
+}
+
+/* ============================================
+   3. MENÚ HAMBURGUESA (FIXES CRÍTICOS)
+   ============================================ */
+.hamburger-btn {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: var(--azul-profundo) !important; /* [cite: 2148] */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    position: fixed !important;
+    top: 80px !important;
+    right: -100% !important;
+    width: 320px !important;
+    height: calc(100vh - 80px) !important; /* [cite: 2168] */
+    background: white !important;
+    transition: right 0.4s ease !important; /* [cite: 2172] */
+    padding: 20px;
+    z-index: 1000;
+}
+
+.hamburger-menu.active {
+    right: 0 !important; /* [cite: 2179] */
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    visibility: visible;
+    opacity: 1; /* [cite: 2195] */
+}
+
+/* ============================================
+   4. PORTADA Y CARRUSEL
+   ============================================ */
+.portada {
+    position: relative;
+    height: 85vh;
+    margin-top: 80px;
+    overflow: hidden; /* [cite: 812] */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease; /* [cite: 832] */
+}
+
+.slide.activo {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* [cite: 839] */
+}
+
+.carrusel-capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(30, 58, 95, 0.8), rgba(0,0,0,0.6)); /* [cite: 903] */
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* ============================================
+   5. FORMULARIO DE CONTACTO (FIXES DE DISEÑO)
+   ============================================ */
+.contacto-contenido {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 40px !important; /* [cite: 1819] */
+}
+
+.formulario-contacto {
+    flex: 1 !important;
+    min-width: 300px !important;
+    padding: 30px !important;
+    background: var(--blanco) !important;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08) !important; /* [cite: 1837] */
+}
+
+.form-grupo input, .form-grupo textarea, .form-grupo select {
+    width: 100% !important;
+    padding: 14px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    background: #f9fafb !important; /* [cite: 1867] */
+}
+
+.btn-enviar {
+    width: 100% !important;
+    background: var(--dorado-elegante) !important;
+    color: var(--azul-profundo) !important;
+    padding: 16px !important;
+    font-weight: 600 !important;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3) !important; /* [cite: 1941] */
+}
+
+/* ============================================
+   6. ANIMACIONES DE ENTRADA
+   ============================================ */
+.oculto-animacion {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* [cite: 2580] */
+}
+
+.animado {
+    opacity: 1;
+    transform: translateY(0); /* [cite: 2580] */
+}
+
+/* ============================================
+   7. BOTÓN WHATSAPP
+   ============================================ */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--whatsapp); /* [cite: 683] */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1000;
+    font-size: 28px;
+    animation: pulse 2s infinite; /* [cite: 693] */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}

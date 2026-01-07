@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Bufete Cristian Cano - Abogado Especialista en Derecho Privado</title>
-    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/logo-icono.ico">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-    <a href="https://wa.me/573052214935?text=Hola,%20necesito%20asesoría%20legal" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/573052214935?text=Hola,%20necesito%20asesoría%20legal" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">¿Necesitas ayuda?</span>
     </a>
 
     <header class="header">
-        <div class="contenedor header-contenido">
+        <div class="contenedor header-contenido"> 
             <div class="logo">
-                <img src="imagenes/logotipo.jpeg" alt="Logo">
+                <img src="imagenes/Logo.jpeg" alt="Bufete Cristian Cano"> 
             </div>
-            <nav class="nav-desktop">
+            <nav class="nav-desktop"> 
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
@@ -26,8 +28,9 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
+
             <div class="hamburger-container">
-                <button class="hamburger-btn" id="hamburgerBtn">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú de servicios">
                     <span class="hamburger-icon">
                         <span class="line line1"></span>
                         <span class="line line2"></span>
@@ -37,57 +40,6 @@
                 </button>
             </div>
         </div>
+
         <div class="hamburger-menu" id="hamburgerMenu">
-            <ul class="menu-list">
-                <li><a href="#inicio" class="menu-item">Inicio</a></li>
-                <li><a href="#servicios" class="menu-item">Servicios</a></li>
-                <li><a href="#contacto" class="menu-item">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="menu-overlay" id="menuOverlay"></div>
-    </header>
-
-    <section class="portada" id="inicio">
-        <div class="carrusel">
-            <div class="slide activo"><img src="imagenes/abogado principal.jpeg" alt="Oficina"></div>
-            <div class="slide"><img src="imagenes/abogado suplente.jpeg" alt="Justicia"></div>
-            <button class="carrusel-btn prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carrusel-btn next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <div class="carrusel-capa">
-            <div class="contenedor">
-                <h2 class="titulo-portada">La Justicia Se Honra Cuando El Derecho Se Ejerce Con Integridad</h2>
-                <a href="#servicios" class="btn">Ver Servicios</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="contacto" id="contacto">
-        <div class="contenedor">
-            <div class="contacto-contenido">
-                <form id="formContacto" action="https://formsubmit.co/cristiancano957@gmail.com" method="POST">
-                    <div class="form-grupo">
-                        <label>Nombre *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-grupo">
-                        <label>Cédula *</label>
-                        <input type="number" id="cedula" name="cedula" required>
-                    </div>
-                    <div class="form-grupo">
-                        <label>Mensaje *</label>
-                        <textarea id="caso" name="caso" maxlength="500" required></textarea>
-                        <div class="contador-caracteres"><span id="caracteresRestantes">500</span> caracteres restantes</div>
-                    </div>
-                    <button type="submit" class="btn btn-enviar">Enviar Consulta</button>
-                    <div id="mensajeExito" style="display:none;">¡Consulta enviada!</div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-            
+            <div class="menu-

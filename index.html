@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Bufete Cristian Cano - Abogado Especialista en Derecho Privado</title>
-    
     <link rel="stylesheet" href="stilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
-    <link rel="icon" type="image/x-icon" href="img/logo-icono.ico">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-    <a href="https://wa.me/573052214935?text=Hola,%20necesito%20asesoría%20legal" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/573052214935?text=Hola,%20necesito%20asesoría%20legal" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">¿Necesitas ayuda?</span>
     </a>
 
     <header class="header">
         <div class="contenedor header-contenido">
             <div class="logo">
-                <img src="imagenes/logotipo.jpeg" alt="Logo Bufete Cristian Cano" id="logo-imagen">
+                <img src="imagenes/logotipo.jpeg" alt="Logo">
             </div>
-
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -32,9 +26,8 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-
             <div class="hamburger-container">
-                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú de servicios">
+                <button class="hamburger-btn" id="hamburgerBtn">
                     <span class="hamburger-icon">
                         <span class="line line1"></span>
                         <span class="line line2"></span>
@@ -44,228 +37,57 @@
                 </button>
             </div>
         </div>
-
         <div class="hamburger-menu" id="hamburgerMenu">
-            <div class="menu-header">
-                <h3><i class="fas fa-gavel"></i> Nuestros Servicios</h3>
-                <p class="menu-subtitle">Áreas de especialización legal</p>
-            </div>
             <ul class="menu-list">
-                <li>
-                    <a href="#servicios" class="menu-item" data-service="familia">
-                        <div class="menu-icon"><i class="fas fa-home"></i></div>
-                        <div class="menu-content">
-                            <h4>Derecho de Familia</h4>
-                            <p>Separación, divorcio, custodia</p>
-                        </div>
-                        <div class="menu-arrow"><i class="fas fa-chevron-right"></i></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#servicios" class="menu-item" data-service="laboral">
-                        <div class="menu-icon"><i class="fas fa-briefcase"></i></div>
-                        <div class="menu-content">
-                            <h4>Derecho Laboral</h4>
-                            <p>Asesoría empresarial y litigio</p>
-                        </div>
-                        <div class="menu-arrow"><i class="fas fa-chevron-right"></i></div>
-                    </a>
-                </li>
+                <li><a href="#inicio" class="menu-item">Inicio</a></li>
+                <li><a href="#servicios" class="menu-item">Servicios</a></li>
+                <li><a href="#contacto" class="menu-item">Contacto</a></li>
             </ul>
-            <div class="menu-footer">
-                <a href="#contacto" class="menu-cta">
-                    <i class="fas fa-paper-plane"></i> Solicitar Consulta
-                </a>
-            </div>
         </div>
-        
         <div class="menu-overlay" id="menuOverlay"></div>
     </header>
 
     <section class="portada" id="inicio">
         <div class="carrusel">
-            <div class="slide activo">
-                <img src="imagenes/abogado principal.jpeg" alt="Oficina legal moderna">
-            </div>
-            <div class="slide">
-                <img src="imagenes/abogado suplente.jpeg" alt="Justicia">
-            </div>
-            <div class="slide">
-                <img src="imagenes/abogado principal 3.jpeg" alt="Reunión cliente">
-            </div>
-
+            <div class="slide activo"><img src="imagenes/abogado principal.jpeg" alt="Oficina"></div>
+            <div class="slide"><img src="imagenes/abogado suplente.jpeg" alt="Justicia"></div>
             <button class="carrusel-btn prev"><i class="fas fa-chevron-left"></i></button>
             <button class="carrusel-btn next"><i class="fas fa-chevron-right"></i></button>
-            
-            <div class="indicadores">
-                <span class="indicador activo" data-index="0"></span>
-                <span class="indicador" data-index="1"></span>
-                <span class="indicador" data-index="2"></span>
-            </div>
         </div>
-
         <div class="carrusel-capa">
             <div class="contenedor">
-                <h2 class="titulo-portada">La Justicia Se Honra <br> Cuando El Derecho se Ejerce Con Integridad</h2>
-                <p class="texto-portada">Comprometidos con la defensa responsable y técnica del derecho.</p>
-                <div class="portada-botones">
-                    <a href="#servicios" class="btn">Ver Servicios</a>
-                    <a href="#contacto" class="btn btn-contacto">Consultar Ahora</a>
-                </div>
+                <h2 class="titulo-portada">La Justicia Se Honra Cuando El Derecho Se Ejerce Con Integridad</h2>
+                <a href="#servicios" class="btn">Ver Servicios</a>
             </div>
-        </div>
-    </section>
-
-    <section class="nosotros" id="nosotros">
-        <div class="contenedor">
-            <p class="subtitulo">Nuestra Filosofía</p>
-            <h2 class="titulo-seccion">Bufete Cristian Cano</h2>
-            
-            <div class="nosotros-contenido">
-                <div class="nosotros-info">
-                    <h3>Quiénes Somos</h3>
-                    <p>Soy Cristian Cano, abogado experto dedicado al Derecho Privado, abarcando lo Civil, Laboral y Corporativo.</p>
-                    <p>Mis principios son la transparencia, diligencia y compromiso con el resultado.</p>
-                </div>
-
-                <div class="mision-vision">
-                    <div class="card-mv">
-                        <div class="icono-mv"><i class="fas fa-bullseye"></i></div>
-                        <h4>Misión</h4>
-                        <p>Resolver conflictos legales de alto nivel a nivel nacional.</p>
-                        <p class="valores"><strong>Valores:</strong> Transparencia, Diligencia, Compromiso.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="abogados-titulo">
-                <h3>Nuestro Equipo de Trabajo</h3>
-            </div>
-
-            <div class="tarjetas-abogados">
-                <div class="tarjeta-abogado">
-                    <div class="abogado-imagen">
-                        <img src="imagenes/abogado relievel.jpeg" alt="Cristian Cano">
-                    </div>
-                    <div class="abogado-info">
-                        <h4>Cristian Cano</h4>
-                        <span class="abogado-cargo">Abogado Principal</span>
-                        <p class="abogado-descripcion">Especialista en Derecho Privado y litigio estratégico.</p>
-                        <div class="especialidades-container">
-                            <h5>Áreas:</h5>
-                            <div class="especialidades-list">
-                                <span>Derecho Civil</span>
-                                <span>Derecho Laboral</span>
-                            </div>
-                        </div>
-                        <a href="#contacto" class="btn btn-pequeno">Contactar</a>
-                    </div>
-                </div>
-
-                <div class="tarjeta-abogado">
-                    <div class="abogado-imagen">
-                        <img src="imagenes/gerente administrativo.jpeg" alt="Roberto Vega">
-                    </div>
-                    <div class="abogado-info">
-                        <h4>Roberto Vega</h4>
-                        <span class="abogado-cargo">Gerente Administrativo</span>
-                        <p class="abogado-descripcion">Lidera la estructura operativa y comunicación asertiva con el cliente.</p>
-                        <a href="#contacto" class="btn btn-pequeno">Contactar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="servicios" id="servicios">
-        <div class="contenedor">
-            <p class="subtitulo">Áreas de Especialización</p>
-            <h2 class="titulo-seccion">Nuestro Portafolio</h2>
-            <div class="tarjetas-servicios">
-                <div class="tarjeta-servicio">
-                    <div class="servicio-icono"><i class="fas fa-home"></i></div>
-                    <h3>Derecho de Familia</h3>
-                    <div class="servicio-detalles">
-                        <ul>
-                            <li>Divorcios</li>
-                            <li>Sucesiones</li>
-                            <li>Custodia y Alimentos</li>
-                        </ul>
-                    </div>
-                    <a href="#contacto" class="btn-servicio">Consultar <i class="fas fa-arrow-right"></i></a>
-                </div>
-                </div>
         </div>
     </section>
 
     <section class="contacto" id="contacto">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Contacto</h2>
             <div class="contacto-contenido">
-                <div class="contacto-info">
-                    <h3>Información</h3>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div><h4>Teléfono</h4><p>305 221 49 35</p></div>
+                <form id="formContacto" action="https://formsubmit.co/cristiancano957@gmail.com" method="POST">
+                    <div class="form-grupo">
+                        <label>Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div><h4>Dirección</h4><p>Carrera 52 número 50 - 25</p></div>
+                    <div class="form-grupo">
+                        <label>Cédula *</label>
+                        <input type="number" id="cedula" name="cedula" required>
                     </div>
-                    <div class="redes-contacto">
-                        <h4>Síguenos</h4>
-                        <div class="redes-icons">
-                            <a href="https://www.instagram.com/abogadocristiancano" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/share/1BjzULbHk7/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        </div>
+                    <div class="form-grupo">
+                        <label>Mensaje *</label>
+                        <textarea id="caso" name="caso" maxlength="500" required></textarea>
+                        <div class="contador-caracteres"><span id="caracteresRestantes">500</span> caracteres restantes</div>
                     </div>
-                </div>
-
-                <div class="formulario-contacto">
-                    <form id="formContacto" action="https://formsubmit.co/cristiancano957@gmail.com" method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <div class="form-grupo">
-                            <label for="nombre">Nombre *</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                            <div class="error-msg" id="errorNombre"></div>
-                        </div>
-                        <div class="form-grupo">
-                            <label for="cedula">Cédula *</label>
-                            <input type="number" id="cedula" name="cedula" required>
-                        </div>
-                        <div class="form-grupo">
-                            <label for="rama">Rama del Derecho *</label>
-                            <select id="rama" name="rama" required>
-                                <option value="">Seleccione...</option>
-                                <option value="familia">Derecho de Familia</option>
-                                <option value="laboral">Derecho Laboral</option>
-                                <option value="civil">Derecho Civil</option>
-                            </select>
-                        </div>
-                        <div class="form-grupo">
-                            <label for="caso">Descripción *</label>
-                            <textarea id="caso" name="caso" rows="5" maxlength="500" required></textarea>
-                            <div class="contador-caracteres"><span id="caracteresRestantes">500</span> caracteres restantes</div>
-                        </div>
-                        <button type="submit" class="btn btn-enviar">Enviar Consulta</button>
-                        <div class="mensaje-exito" id="mensajeExito">¡Enviado con éxito!</div>
-                    </form>
-                </div>
+                    <button type="submit" class="btn btn-enviar">Enviar Consulta</button>
+                    <div id="mensajeExito" style="display:none;">¡Consulta enviada!</div>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="contenedor">
-            <div class="footer-copyright">
-                <p>&copy; 2025 Bufete Cristian Cano. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
-
 
             

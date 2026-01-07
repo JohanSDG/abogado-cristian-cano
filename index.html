@@ -463,7 +463,8 @@ SECCIÓN CONTACTO / FORMULARIO
                                 </div>
                                 <div class="form-grupo">
                                     <label for="cedula">Número de Cédula *</label>
-                                    <input type="number" id="cedula" name="cedula" required>
+                                    <input type="text" id="cedula" name="cedula" maxlength="10" inputmode="numeric"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)" required>
                                     <div class="error-msg" id="errorCedula"></div>
                                 </div>
                                 <div class="form-grupo">

@@ -222,32 +222,53 @@ function enviarFormulario() {
     const formulario = document.getElementById('formContacto');
     const botonEnviar = formulario.querySelector('.btn-enviar');
     const mensajeExito = document.getElementById('mensajeExito');
+
     // Mostrar estado de carga 
     const textoOriginal = botonEnviar.innerHTML;
     botonEnviar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     botonEnviar.disabled = true;
-    // Simular envío (en producción, reemplazar con petición real) 
-    setTimeout(() => {
-        // Éxito 
-        mensajeExito.style.display = 'block';
-        formulario.reset();
-        // Restaurar contador de caracteres 
-        const contadorCaracteres = document.getElementById('caracteresRestantes');
-        if (contadorCaracteres) {
-            contadorCaracteres.textContent = '500';
-            contadorCaracteres.style.color = '';
-        }
-        // Restaurar botón 
-        botonEnviar.innerHTML = textoOriginal;
-        botonEnviar.disabled = false;
-        // Ocultar mensaje después de 5 segundos 
-        setTimeout(() => {
-            mensajeExito.style.display = 'none';
-        }, 5000);
-        console.log('Formulario enviado exitosamente');
-        // Scroll suave al mensaje de éxito 
-        mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 1500);
+
+    // Enviar datos reales con AJAX
+    const formData = new FormData(formulario);
+
+    fetch("https://formsubmit.co/ajax/cristiancano957@gmail.com", {
+        method: "POST",
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            // Éxito 
+            mensajeExito.style.display = 'block';
+            mensajeExito.textContent = '¡Consulta enviada exitosamente! Nos contactaremos pronto.';
+            mensajeExito.style.backgroundColor = '#2ecc71'; // Verde éxito
+            formulario.reset();
+
+            // Restaurar contador de caracteres 
+            const contadorCaracteres = document.getElementById('caracteresRestantes');
+            if (contadorCaracteres) {
+                contadorCaracteres.textContent = '500';
+                contadorCaracteres.style.color = '';
+            }
+
+            // Ocultar mensaje después de 5 segundos 
+            setTimeout(() => {
+                mensajeExito.style.display = 'none';
+            }, 5000);
+
+            console.log('Formulario enviado exitosamente:', data);
+            mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(error => {
+            console.error('Error al enviar:', error);
+            mensajeExito.style.display = 'block';
+            mensajeExito.textContent = 'Hubo un error al enviar. Por favor, intenta nuevamente o contáctanos por WhatsApp.';
+            mensajeExito.style.backgroundColor = '#e74c3c'; // Rojo error
+        })
+        .finally(() => {
+            // Restaurar botón 
+            botonEnviar.innerHTML = textoOriginal;
+            botonEnviar.disabled = false;
+        });
 }
 // ============================================ 
 // 6. ANIMACIONES AL HACER SCROLL 

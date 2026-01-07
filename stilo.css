@@ -2,172 +2,119 @@
    1. VARIABLES Y CONFIGURACIÓN GLOBAL
    ============================================ */
 :root {
-    --azul-profundo: #1E3A5F; /* [cite: 620] */
-    --dorado-elegante: #D4AF37; /* [cite: 621] */
-    --gris-claro: #F5F7FA; /* [cite: 622] */
-    --gris-oscuro: #2D3748; /* [cite: 623] */
-    --blanco: #FFFFFF; /* [cite: 624] */
-    --whatsapp: #25D366; /* [cite: 625] */
-    --sombra: rgba(0, 0, 0, 0.08); /* [cite: 626] */
-    --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1); /* [cite: 628] */
+    --azul-profundo: #1E3A5F;
+    --dorado-elegante: #D4AF37;
+    --gris-claro: #F5F7FA;
+    --gris-oscuro: #2D3748;
+    --blanco: #FFFFFF;
+    --whatsapp: #25D366;
+    --sombra: rgba(0, 0, 0, 0.08);
+    --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 * {
-    margin: 0; /* [cite: 632] */
-    padding: 0; /* [cite: 633] */
-    box-sizing: border-box; /* [cite: 634] */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; /* [cite: 639] */
-    color: var(--gris-oscuro); /* [cite: 640] */
-    background-color: var(--blanco); /* [cite: 641] */
-    line-height: 1.6; /* [cite: 644] */
-    overflow-x: hidden; /* [cite: 645] */
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gris-oscuro);
+    background-color: var(--blanco);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif; /* [cite: 648] */
-    color: var(--azul-profundo); /* [cite: 650] */
+    font-family: 'Playfair Display', serif;
+    color: var(--azul-profundo);
 }
 
 /* ============================================
-   2. HEADER Y NAVEGACIÓN (Corrección de menú)
+   2. HEADER Y NAVEGACIÓN
    ============================================ */
 .header {
-    position: fixed; /* [cite: 727] */
-    top: 0; /* [cite: 728] */
-    width: 100%; /* [cite: 730] */
-    background-color: rgb(240, 239, 237); /* [cite: 731] */
-    box-shadow: 0 2px 15px var(--sombra); /* [cite: 732] */
-    z-index: 999; /* [cite: 733] */
-    padding: 10px 0 !important; /* [cite: 2130] */
-    height: 80px !important; /* [cite: 2131] */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(240, 239, 237);
+    box-shadow: 0 2px 15px var(--sombra);
+    z-index: 999;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .header-contenido {
-    display: flex !important; /* [cite: 751] */
-    justify-content: space-between; /* [cite: 739] */
-    align-items: center !important; /* [cite: 752] */
-    height: 60px !important; /* [cite: 2134] */
-    max-width: 1200px; /* [cite: 666] */
-    margin: 0 auto; /* [cite: 667] */
-    padding: 0 20px; /* [cite: 669] */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo img {
-    height: 60px !important; /* Ajustado para que no se salga del header */
+    height: 60px !important;
     width: auto !important;
-    object-fit: contain !important;
+    object-fit: contain;
 }
 
 .nav-desktop ul {
-    display: flex; /* [cite: 779] */
-    gap: 35px; /* [cite: 780] */
-    list-style: none; /* [cite: 658] */
+    display: flex;
+    gap: 35px;
+    list-style: none;
 }
 
 .nav-desktop a {
-    font-weight: 500; /* [cite: 783] */
-    text-decoration: none; /* [cite: 653] */
-    color: var(--azul-profundo); /* [cite: 769] */
-    transition: var(--transicion); /* [cite: 655] */
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--azul-profundo);
+    transition: var(--transicion);
 }
 
 .nav-desktop a:hover {
-    color: var(--dorado-elegante); /* [cite: 803] */
+    color: var(--dorado-elegante);
 }
 
 /* ============================================
    3. PORTADA Y CARRUSEL
    ============================================ */
 .portada {
-    position: relative; /* [cite: 808] */
-    margin-top: 80px; /* [cite: 809] */
-    height: 85vh; /* [cite: 810] */
-    overflow: hidden; /* [cite: 812] */
+    position: relative;
+    margin-top: 80px;
+    height: 85vh;
+    overflow: hidden;
+    background-color: #05090f; /* Fondo de respaldo */
 }
 
 .slide {
-    position: absolute; /* [cite: 825] */
-    width: 100%; /* [cite: 828] */
-    height: 100%; /* [cite: 830] */
-    opacity: 0; /* [cite: 831] */
-    transition: opacity 1s ease-in-out; /* [cite: 832] */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.slide.activo { opacity: 1; } /* [cite: 833] */
+.slide.activo { opacity: 1; }
 
 .slide img {
-    width: 100%; /* [cite: 837] */
-    height: 100%; /* [cite: 838] */
-    object-fit: cover; /* [cite: 839] */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .carrusel-capa {
-    position: absolute; /* [cite: 897] */
-    top: 0; /* [cite: 899] */
-    width: 100%; /* [cite: 901] */
-    height: 100%; /* [cite: 902] */
-    background: linear-gradient(to right, rgba(5, 9, 15, 0.85) 0%, rgba(5, 9, 15, 0.7) 100%); /* [cite: 903] */
-    display: flex; /* [cite: 904] */
-    align-items: center; /* [cite: 905] */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(5, 9, 15, 0.85) 0%, rgba(5, 9, 15, 0.4) 100%);
+    display: flex;
+    align-items: center;
     color: white;
-}
-
-.titulo-portada {
-    font-size: 3.5rem; /* [cite: 909] */
-    margin-bottom: 20px; /* [cite: 911] */
-}
-
-/* ============================================
-   4. TARJETAS DE SERVICIOS (Estilo Elegante)
-   ============================================ */
-.tarjetas-servicios {
-    display: grid; /* [cite: 1344] */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* [cite: 1345] */
-    gap: 30px; /* [cite: 1346] */
-}
-
-.tarjeta-servicio {
-    background: var(--blanco); /* [cite: 1349] */
-    padding: 30px; /* [cite: 1351] */
-    border-top: 4px solid var(--dorado-elegante); /* [cite: 1354] */
-    box-shadow: 0 10px 30px var(--sombra); /* [cite: 1352] */
-    transition: var(--transicion); /* [cite: 1353] */
-    border-radius: 10px; /* [cite: 1350] */
-}
-
-.tarjeta-servicio:hover {
-    transform: translateY(-15px); /* [cite: 1364] */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* [cite: 1365] */
-}
-
-/* ============================================
-   5. FORMULARIO DE CONTACTO (Fixes)
-   ============================================ */
-.formulario-contacto {
-    flex: 1 !important; /* [cite: 1831] */
-    background: var(--blanco) !important; /* [cite: 1834] */
-    padding: 30px 25px !important; /* [cite: 1835] */
-    border-radius: 10px !important; /* [cite: 1836] */
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08) !important; /* [cite: 1837] */
-}
-
-.form-grupo {
-    margin-bottom: 20px !important; /* [cite: 1843] */
-}
-
-.form-grupo label {
-    display: block !important; /* [cite: 1850] */
-    color: var(--azul-profundo) !important; /* [cite: 1853] */
-    font-weight: 600 !important; /* [cite: 1852] */
-}
-
-.form-grupo input, .form-grupo select, .form-grupo textarea {
-    width: 100% !important; /* [cite: 1860] */
-    padding: 14px 16px !important; /* [cite: 1862] */
-    border: 1px solid #d1d5db !important; /* [cite: 1863] */
-    border-radius: 6px !important; /* [cite: 1864] */
-    background: #f9fafb !important; /* [cite: 1867] */
+    z-index: 5;
 }
